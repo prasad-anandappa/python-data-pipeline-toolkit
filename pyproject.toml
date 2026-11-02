@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pipeline-toolkit"
+version = "0.1.0"
+description = "A typed, tested data-pipeline utility library: ingestion, schema validation, deduplication, data-quality rules and idempotent loads."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Prasad Dimba Anandappa" }]
+requires-python = ">=3.11"
+keywords = ["etl", "data-pipeline", "data-quality", "schema-validation", "idempotency"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Software Development :: Libraries",
+]
+# The core library is deliberately dependency-free (Python standard library only).
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "hypothesis>=6", "mypy>=1.10"]
+
+[project.scripts]
+pipeline-toolkit = "pipeline_toolkit.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.mypy]
+strict = true
+python_version = "3.11"
+files = ["src/pipeline_toolkit"]

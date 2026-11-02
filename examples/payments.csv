@@ -1,0 +1,11 @@
+payment_id,account_id,amount,currency,status,paid_on
+pay_1001,acc_501,125.50,USD,settled,2026-10-28
+pay_1002,acc_502,89.99,USD,settled,2026-10-28
+pay_1003,acc_501,240.00,USD,pending,2026-10-29
+pay_1004,acc_503,15.25,EUR,settled,2026-10-29
+pay_1005,acc_504,999.00,USD,failed,2026-10-30
+pay_1003,acc_501,240.00,USD,settled,2026-10-30
+pay_1006,acc_505,42.10,GBP,settled,2026-10-30
+pay_1007,acc_502,,USD,settled,2026-10-31
+pay_1008,acc_999,77.77,USD,settled,2026-10-31
+pay_1009,acc_506,-5.00,USD,settled,2026-10-31

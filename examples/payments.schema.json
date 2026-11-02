@@ -1,0 +1,1 @@
+{"fields":[{"name":"payment_id","pattern":"pay_[0-9]+","type":"str"},{"name":"account_id","pattern":"acc_[0-9]+","type":"str"},{"min_value":0,"name":"amount","type":"decimal"},{"choices":["USD","EUR","GBP"],"name":"currency","type":"str"},{"choices":["pending","settled","failed"],"name":"status","type":"str"},{"name":"paid_on","type":"date"}],"strict":false}
